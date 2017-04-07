@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    info - 로고 - nation
+    <!--<ion-searchbar (ionInput)="searchFoods($event)"></ion-searchbar>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let food of foods" col-4 col-sm-4 col-md-3 col-lg-3 col-xl-2>
+        <img src="http://localhost:8000/images/{{food.englishName | lowercase}}.jpeg" (click)="selectFood(food)"/>
+      </ion-col>
+    </ion-row>
+    <ion-card *ngIf="selectedFood">
+      <img src="http://localhost:8000/images/{{selectedFood.englishName | lowercase}}.jpeg"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{selectedFood.name}} ({{selectedFood.englishName}})
+        </ion-card-title>
+        <p>
+          {{selectedFood.description}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+</ion-content>
