@@ -1,0 +1,29 @@
+<ion-header>
+  <!--<ion-navbar>-->
+    <!--<ion-title>LOGO</ion-title>-->
+    <!--<ion-buttons end>-->
+      <!--<button ion-button icon-only color="royal">-->
+        <!--<ion-icon name="menu"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+  <!--</ion-navbar>-->
+  <ion-navbar>
+    <ion-title>LOGO</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionInput)="searchFoods($event)"></ion-searchbar>
+
+    <ion-card *ngFor="let food of foods">
+      <img src="http://localhost:8000/images/{{food.englishName | lowercase}}.jpeg"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{food.name}} ({{food.englishName}})
+        </ion-card-title>
+        <p>
+          {{food.description}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
