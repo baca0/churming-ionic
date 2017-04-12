@@ -1,9 +1,11 @@
 import {Component} from "@angular/core";
 import {Http} from "@angular/http";
-import {NavParams} from "ionic-angular";
+import {NavParams, NavController} from "ionic-angular";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/toPromise";
 import "rxjs/Rx";
+import {FoodiPage} from "../foodi/foodi";
+import {DetailPage} from "./detail";
 
 @Component({
   selector: 'page-home',
@@ -11,12 +13,10 @@ import "rxjs/Rx";
 })
 export class HomePage {
   private foods: any;
-  private selectedFood: any;
+  //private selectedFood: any;
 
-  constructor(private http: Http, private params: NavParams) {
+  constructor(private http: Http, private params: NavParams, private navCtrl: NavController) {
     this.findFoodByCategory(params.get("category"));
-
-    this.selectedFood = null;
   }
 
   findFoodByCategory(category) {
@@ -26,10 +26,8 @@ export class HomePage {
   }
 
   selectFood(food) {
-    if (this.selectedFood == food) {
-      this.selectedFood = null;
-    } else {
-      this.selectedFood = food;
-    }
+    this.navCtrl.push(DetailPage, {
+      selectedFood: food
+    });
   }
 }

@@ -3,7 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { ChurmingApp } from './app.component';
 import { AboutPage, NoticePage } from '../pages/more/about';
 import { NationPage } from '../pages/nation/nation';
-import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/food/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MorePage } from '../pages/more/more';
 
@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {SearchPage} from "../pages/search/search";
 import {CategoryPage} from "../pages/category/category";
+import {FoodiPage} from "../pages/foodi/foodi";
+import {DetailPage} from "../pages/food/detail";
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import {CategoryPage} from "../pages/category/category";
     NoticePage,
     SearchPage,
     CategoryPage,
+    DetailPage,
     TabsPage
   ],
   imports: [
@@ -37,6 +40,7 @@ import {CategoryPage} from "../pages/category/category";
     NoticePage,
     SearchPage,
     CategoryPage,
+    DetailPage,
     TabsPage
   ],
   providers: [
