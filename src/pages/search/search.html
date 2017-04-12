@@ -16,7 +16,7 @@
   <ion-searchbar (ionInput)="searchFoods($event)"></ion-searchbar>
 
     <ion-card *ngFor="let food of foods">
-      <img src="http://localhost:8000/images/{{food.englishName | lowercase}}.jpeg"/>
+      <img src="{{apiEndpoint}}/images/{{food.englishName | lowercase}}.jpeg"/>
       <ion-card-content>
         <ion-card-title>
           {{food.name}} ({{food.englishName}})

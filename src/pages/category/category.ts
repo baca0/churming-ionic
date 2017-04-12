@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {Http} from '@angular/http';
 
 import {NavController} from 'ionic-angular';
@@ -12,12 +12,13 @@ import {HomePage} from "../food/home";
 export class CategoryPage {
   private categories: any;
 
-  constructor(private navCtrl: NavController, private http: Http) {
+  constructor(private navCtrl: NavController, private http: Http, @Inject('ApiEndpoint') private apiEndpoint: string) {
+    console.log(apiEndpoint);
     this.findCategories();
   }
 
   findCategories() {
-    return this.http.get('http://localhost:8000/categories').map(res => res.json()).subscribe(data => {
+    return this.http.get(`${this.apiEndpoint}/categories`).map(res => res.json()).subscribe(data => {
       this.categories = data;
     });
   }

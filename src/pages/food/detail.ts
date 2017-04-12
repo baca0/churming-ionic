@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Inject} from "@angular/core";
 import {Http} from "@angular/http";
 import {NavParams, NavController} from "ionic-angular";
 import "rxjs/add/operator/map";
@@ -12,7 +12,8 @@ import "rxjs/Rx";
 export class DetailPage {
   private selectedFood: any;
 
-  constructor(private http: Http, private params: NavParams, private navCtrl: NavController) {
+  constructor(private http: Http, private params: NavParams, private navCtrl: NavController, @Inject('ApiEndpoint') private apiEndpoint: string) {
+    console.log(apiEndpoint);
     this.selectedFood = params.get("selectedFood");
   }
 }

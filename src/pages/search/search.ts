@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Inject} from "@angular/core";
 import {Http} from "@angular/http";
 import {NavController} from "ionic-angular";
 import "rxjs/add/operator/map";
@@ -15,7 +15,7 @@ export class SearchPage {
   private foods: any;
 
 
-  constructor(navCtrl: NavController, private http: Http) {
+  constructor(navCtrl: NavController, private http: Http, @Inject('ApiEndpoint') private apiEndpoint: string) {
     // TODO: 나라가 추가될 때 선택 가능한 형태로
     this.nation = "South Korea";
     this.findFoods("nationId");
@@ -26,7 +26,7 @@ export class SearchPage {
   }
 
   findFoods(nationId) {
-    return this.http.get('http://localhost:8000/foods').map(res => res.json()).subscribe(data => {
+    return this.http.get(`${this.apiEndpoint}/foods`).map(res => res.json()).subscribe(data => {
       this.allFoods = data;
     });
   }
