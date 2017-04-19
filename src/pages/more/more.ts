@@ -15,7 +15,7 @@ import {AboutPage, NoticePage} from "./about";
     <!--</ion-buttons>-->
   <!--</ion-navbar>-->
   <ion-navbar>
-      <ion-title>LOGO</ion-title>
+      <ion-title>So!ate</ion-title>
     </ion-navbar>
 </ion-header>
 

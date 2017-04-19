@@ -9,19 +9,22 @@
   <!--</ion-navbar>-->
 
     <ion-navbar>
-      <ion-title>LOGO</ion-title>
+      <ion-title>So!ate</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content class="card-background-category">
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let category of categories" col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3>
+      <ion-col *ngFor="let category of categories" col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3  style="text-align:center;">
         <ion-card (click)="selectCategory(category)">
-          <img src="{{apiEndpoint}}/images/{{category.imageName}}"/>
-          <div class="card-title">{{category.name}}</div>
+          <img class="card-image" src="{{apiEndpoint}}/images/category/{{category.englishName.replace(' ', '-') | lowercase}}.jpeg"/>
+          <!--<img src="{{apiEndpoint}}/images/category/icon/{{category.englishName.replace(' ', '-') | lowercase}}.png"/>-->
+          <div class="card-title">{{category.englishName}}</div>
+          <!--<div class="card-subtitle">{{category.name}}</div>-->
         </ion-card>
       </ion-col>
+
     </ion-row>
   </ion-grid>
 </ion-content>
