@@ -7,13 +7,12 @@ page-category {
   ion-card {
     position: relative;
     text-align: center;
-    height: 100px;
+    height: 90px;
   }
 
   .card-image {
     height: 100%;
-    opacity: 0.7
-  ;
+    opacity: 0.8;
   }
   .card-title {
     position: absolute;
@@ -22,6 +21,7 @@ page-category {
     width: 100%;
     font-weight: bold;
     color: ghostwhite;
+    text-shadow: 1px 1px 1px #352f2f;
   }
 
   .card-subtitle {
