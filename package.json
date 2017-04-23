@@ -1,5 +1,5 @@
 {
-  "name": "churming",
+  "name": "so!ate",
   "author": "Hailey.p",
   "homepage": "http://ionicframework.com/",
   "private": true,
@@ -49,5 +49,5 @@
       "locator": "ios"
     }
   ],
-  "description": "foodi-ionic-tab: An Ionic project"
+  "description": "So.I.Ate"
 }

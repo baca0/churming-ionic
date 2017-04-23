@@ -14,7 +14,7 @@
 
 <ion-content>
   <ion-card>
-    <img src="http://localhost:8000/images/food/{{selectedFood.englishName | lowercase}}.jpeg"/>
+    <img src="{{apiEndpoint}}/images/food/{{selectedFood.englishName}}.jpeg"/>
     <ion-card-content>
       <ion-card-title>
         {{selectedFood.name}} ({{selectedFood.englishName}})

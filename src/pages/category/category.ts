@@ -13,7 +13,6 @@ export class CategoryPage {
   private categories: any;
 
   constructor(private navCtrl: NavController, private http: Http, @Inject('ApiEndpoint') private apiEndpoint: string) {
-    console.log(apiEndpoint);
     this.findCategories();
   }
 
