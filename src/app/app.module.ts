@@ -46,7 +46,7 @@ import {DetailPage} from "../pages/food/detail";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    {provide: 'ApiEndpoint', useValue: 'http://127.0.0.1:8000'}
+    {provide: 'ApiEndpoint', useValue: 'http://localhost:8000'}
   ]
 })
 export class AppModule {}

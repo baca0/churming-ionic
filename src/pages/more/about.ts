@@ -13,9 +13,9 @@ import {NavController} from "ionic-angular";
 </ion-header>
 
 <ion-content padding>
-  This "Solate" application is for my foreign friends.<br>
+  This "so!ate" application is for my foreign friends.<br>
   And I thought it would help other foreigners.<br>
-  If you have question or request, Please let me know <a href="foodi.hailey@gmail.com">foodi.hailey@gmail.com</a><br/>
+  If you have question or request, Please let me know <a href="soiate.hailey@gmail.com">soiate.hailey@gmail.com</a><br/>
   And If you needed to introduce about your traditional food, Please Please contact me!
 </ion-content>
 `
@@ -38,7 +38,8 @@ export class AboutPage {
 </ion-header>
 
 <ion-content padding>
-  So!ate 어플리케이션은 "한식재단"의 데이터와 구글 이미지 검색을 통해 수집된 이미지로 구성되었습니다.
+  The "so!ate" application consists of the data from the "Korean Food Foundation"(한식재단) and the images collected through Google retrieval and Instagram.<br/>
+  Thank you! @woo_gyoik, @chachaming0413
 </ion-content>
 `
 })

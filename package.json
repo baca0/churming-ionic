@@ -33,21 +33,7 @@
     "@ionic/app-scripts": "1.1.4",
     "typescript": "2.0.9"
   },
-  "cordovaPlugins": [
-    "cordova-plugin-whitelist",
-    "cordova-plugin-statusbar",
-    "cordova-plugin-console",
-    "cordova-plugin-device",
-    "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard"
-  ],
-  "cordovaPlatforms": [
-    "ios",
-    {
-      "platform": "ios",
-      "version": "",
-      "locator": "ios"
-    }
-  ],
+  "cordovaPlugins": [],
+  "cordovaPlatforms": [],
   "description": "So.I.Ate"
 }
