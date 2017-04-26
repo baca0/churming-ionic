@@ -16,4 +16,9 @@ export class DetailPage {
     console.log(apiEndpoint);
     this.selectedFood = params.get("selectedFood");
   }
+
+  replaceLineBreak(s:string) {
+    return s && s.replace(/,/gi,'<br />');
+  }
+
 }
