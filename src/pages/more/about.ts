@@ -15,7 +15,7 @@ import {NavController} from "ionic-angular";
 <ion-content padding>
   This "so!ate" application is for my foreign friends.<br>
   And I thought it would help other foreigners.<br>
-  If you have question or request, Please let me know <a href="soiate.hailey@gmail.com">soiate.hailey@gmail.com</a><br/>
+  If you have question or request, Please let me know <a href="mailto:soiate.hailey@gmail.com">soiate.hailey@gmail.com</a><br/>
   And If you needed to introduce about your traditional food, Please Please contact me!
 </ion-content>
 `
