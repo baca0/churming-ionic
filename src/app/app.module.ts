@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { ChurmingApp } from './app.component';
+import { SoiateApp } from './app.component';
 import { AboutPage, NoticePage } from '../pages/more/about';
 import { NationPage } from '../pages/nation/nation';
 import { HomePage } from '../pages/food/home';
@@ -13,9 +13,11 @@ import {SearchPage} from "../pages/search/search";
 import {CategoryPage} from "../pages/category/category";
 import {DetailPage} from "../pages/food/detail";
 
+import { AdMob } from '@ionic-native/admob';
+
 @NgModule({
   declarations: [
-    ChurmingApp,
+    SoiateApp,
     AboutPage,
     NationPage,
     HomePage,
@@ -27,11 +29,11 @@ import {DetailPage} from "../pages/food/detail";
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(ChurmingApp)
+    IonicModule.forRoot(SoiateApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    ChurmingApp,
+    SoiateApp,
     AboutPage,
     NationPage,
     HomePage,
@@ -45,8 +47,9 @@ import {DetailPage} from "../pages/food/detail";
   providers: [
     StatusBar,
     SplashScreen,
+    AdMob,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    {provide: 'ApiEndpoint', useValue: 'http://localhost:8000'}
+    {provide: 'ApiEndpoint', useValue: 'http://54.166.82.223:8000'}
   ]
 })
 export class AppModule {}

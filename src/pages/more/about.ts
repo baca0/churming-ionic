@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
+import {NavController, Platform} from "ionic-angular";
 
 @Component({
   selector: 'page-about',
@@ -21,18 +21,24 @@ import {NavController} from "ionic-angular";
 `
 })
 export class AboutPage {
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private platform: Platform) {
 
   }
+  //
+  // mailto() {
+  //   this.platform.ready().then(() => {
+  //     window.open('mailto:soiate.hailey@gmail.com');
+  //   })
+  // }
 }
 
 @Component({
-  selector:'page-notice',
+  selector: 'page-notice',
   template: `
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Notice
+     Notice
     </ion-title>
   </ion-navbar>
 </ion-header>

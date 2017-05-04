@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "828744252044",
+    "firebase_url": "https://soate-a7987.firebaseio.com",
+    "project_id": "soate-a7987",
+    "storage_bucket": "soate-a7987.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828744252044:android:276a9ab857de7413",
+        "android_client_info": {
+          "package_name": "com.ionicframework.foodiionictab307836"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828744252044-tsb2478cmdkmnkbj9pdk8bpv173c2cl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYED_LCtpWOUxqH9sKD0yhveeQ6wt3Si4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
