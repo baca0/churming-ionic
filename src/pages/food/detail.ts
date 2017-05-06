@@ -1,6 +1,6 @@
 import {Component, Inject} from "@angular/core";
 import {Http} from "@angular/http";
-import {NavParams, NavController} from "ionic-angular";
+import {NavParams, NavController, Platform} from "ionic-angular";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/toPromise";
 import "rxjs/Rx";
@@ -12,32 +12,48 @@ import {AdMob} from "@ionic-native/admob";
 })
 export class DetailPage {
   private selectedFood: any;
+  private admobId: string;
 
-  constructor(private http: Http, private params: NavParams, private navCtrl: NavController, @Inject('ApiEndpoint') private apiEndpoint: string, private admob: AdMob) {
-    console.log(apiEndpoint);
+  constructor(private http: Http, private params: NavParams, private navCtrl: NavController, @Inject('ApiEndpoint') private apiEndpoint: string, private admob: AdMob, private platform: Platform) {
     this.selectedFood = params.get("selectedFood");
 
     // Admob
-   var admobId: string;
     if (/(android)/i.test(navigator.userAgent)) { // for Android
-      admobId = 'ca-app-pub-9922758676771561/8286332533';
+      this.admobId = 'ca-app-pub-9922758676771561/7145846537';
     } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {// for iOS
-      admobId = 'ca-app-pub-9922758676771561/4076458935';
+      this.admobId = 'ca-app-pub-9922758676771561/4076458935';
     } else { // for Windows Phone
-      admobId = 'ca-app-pub-9922758676771561/8286332533';
+      this.admobId = 'ca-app-pub-9922758676771561/7145846537';
     }
 
-    if (admobId) {
-      this.admob.createBanner({
-        adId: admobId,
-        //isTesting: false, //comment this out before publishing the app
-        autoShow: true
-      });
-    }
+    this.createBanner();
   }
 
   replaceLineBreak(s: string) {
     return s && s.replace(/,/gi, '<br />');
   }
 
+  ngOnDestroy() {
+    this.hideBanner();
+  }
+
+  createBanner() {
+    this.platform.ready().then(() => {
+      if (this.admobId) {
+        this.admob.createBanner({
+          adId: this.admobId,
+          //isTesting: false, //comment this out before publishing the app
+          autoShow: true
+        });
+      }
+    });
+  }
+
+  hideBanner() {
+    this.platform.ready().then(() => {
+      if (this.admobId) {
+        this.admob.hideBanner();
+      }
+    });
+  }
 }
