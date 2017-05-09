@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {SearchPage} from "../search/search";
 import {MorePage} from "../more/more";
 import {CategoryPage} from "../category/category";
+import {UploadPage} from "../upload/upload";
 
 @Component({
   templateUrl: 'tabs.html'
@@ -12,6 +13,7 @@ export class TabsPage {
   tab1Root: any = CategoryPage;
   tab2Root: any = SearchPage;
   tab3Root: any = MorePage;
+  uploadRoot: any = UploadPage;
 
   constructor() {
 
