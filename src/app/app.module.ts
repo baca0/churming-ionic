@@ -20,6 +20,7 @@ import {File} from "@ionic-native/file";
 import {Transfer} from "@ionic-native/transfer";
 import {FilePath} from "@ionic-native/file-path";
 import {Camera} from "@ionic-native/camera";
+import {GlobalVariable} from "../providers/global.variable";
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import {Camera} from "@ionic-native/camera";
     Transfer,
     Camera,
     FilePath,
+    GlobalVariable,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: 'ApiEndpoint', useValue: 'http://54.166.82.223:8000'}
   ]
