@@ -19,5 +19,4 @@ export class GlobalVariable {
   replaceLineBreak(s: string) {
     return s && s.replace(/,/gi, '<br />');
   }
-
 }
