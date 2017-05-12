@@ -5,6 +5,7 @@ import "rxjs/add/operator/map";
 import "rxjs/add/operator/toPromise";
 import "rxjs/Rx";
 import {AdMob} from "@ionic-native/admob";
+import {GlobalVariable} from "../../providers/global.variable";
 
 @Component({
   selector: 'page-detail',
@@ -14,7 +15,7 @@ export class DetailPage {
   private selectedFood: any;
   private admobId: string;
 
-  constructor(private http: Http, private params: NavParams, private navCtrl: NavController, @Inject('ApiEndpoint') private apiEndpoint: string, private admob: AdMob, private platform: Platform) {
+  constructor(private http: Http, private params: NavParams, private navCtrl: NavController, @Inject('ApiEndpoint') private apiEndpoint: string, private admob: AdMob, private platform: Platform, private globalVariable: GlobalVariable) {
     this.selectedFood = params.get("selectedFood");
 
     // Admob
@@ -27,10 +28,6 @@ export class DetailPage {
     }
 
     this.createBanner();
-  }
-
-  replaceLineBreak(s: string) {
-    return s && s.replace(/,/gi, '<br />');
   }
 
   ngOnDestroy() {

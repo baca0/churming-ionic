@@ -16,4 +16,8 @@ export class GlobalVariable {
     return this.allFoods;
   }
 
+  replaceLineBreak(s: string) {
+    return s && s.replace(/,/gi, '<br />');
+  }
+
 }
