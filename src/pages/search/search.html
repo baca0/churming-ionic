@@ -21,9 +21,7 @@
         <ion-card-title>
           {{food.name}} ({{food.englishName}})
         </ion-card-title>
-        <p>
-          {{food.description}}
-        </p>
+        <p [outerHTML]="globalVariable.replaceLineBreak(selectedFood.description)">
       </ion-card-content>
     </ion-card>
 </ion-content>
