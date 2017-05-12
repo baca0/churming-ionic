@@ -64,7 +64,8 @@ import {GlobalVariable} from "../providers/global.variable";
     FilePath,
     GlobalVariable,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    {provide: 'ApiEndpoint', useValue: 'http://54.166.82.223:8000'}
+    {provide: 'ApiEndpoint', useValue: 'http://localhost:8000'}
+    //{provide: 'ApiEndpoint', useValue: 'http://54.166.82.223:8000'}
   ]
 })
 export class AppModule {
