@@ -22,7 +22,6 @@ import {FilePath} from "@ionic-native/file-path";
 import {Camera} from "@ionic-native/camera";
 import {GlobalVariable} from "../providers/global.variable";
 
-
 @NgModule({
   declarations: [
     SoiateApp,
