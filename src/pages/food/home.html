@@ -15,7 +15,7 @@
 <ion-content>
   <ion-grid>
     <ion-row >
-      <ion-col *ngFor="let food of foods; let i = index" col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2>
+      <ion-col *ngFor="let food of foods; let i = index" col-6 col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-2>
         <div class="image-grid-3">
           <img src="{{apiEndpoint}}/images/food/{{food.englishName}}.jpeg" (click)="selectFood(food)" class="wrap"/>
         </div>

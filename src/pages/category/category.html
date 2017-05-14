@@ -15,7 +15,7 @@
 
 <ion-content class="card-background-category">
   <ion-row>
-    <ion-col *ngFor="let category of categories" col-12 col-sm-12 col-sm-12 col-ml-6 col-xl-4>
+    <ion-col *ngFor="let category of categories" col-12 col-xs-12 col-sm-6 col-ml-6 col-xl-4>
       <ion-card (click)="selectCategory(category)">
         <img class="card-image"
              src="{{apiEndpoint}}/images/category/{{category.englishName.replace(' ', '-') | lowercase}}.jpeg"/>
