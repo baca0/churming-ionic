@@ -14,10 +14,14 @@
 </ion-header>
 
 <ion-content class="card-background-category">
-  <ion-card *ngFor="let category of categories" (click)="selectCategory(category)">
-    <img class="card-image"
-         src="{{apiEndpoint}}/images/category/{{category.englishName.replace(' ', '-') | lowercase}}.jpeg"/>
-    <div class="card-title">{{category.englishName}}</div>
-    <div class="card-subtitle">{{category.order}}</div>
-  </ion-card>
+  <ion-row>
+    <ion-col *ngFor="let category of categories" col-12 col-sm-12 col-sm-12 col-ml-6 col-xl-4>
+      <ion-card (click)="selectCategory(category)">
+        <img class="card-image"
+             src="{{apiEndpoint}}/images/category/{{category.englishName.replace(' ', '-') | lowercase}}.jpeg"/>
+        <div class="card-title">{{category.englishName}}</div>
+        <div class="card-subtitle">{{category.order}}</div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>
