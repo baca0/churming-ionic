@@ -39,7 +39,7 @@ export class DetailPage {
       if (this.admobId) {
         this.admob.createBanner({
           adId: this.admobId,
-          //isTesting: false, //comment this out before publishing the app
+          isTesting: false, //comment this out before publishing the app
           autoShow: true
         });
       }

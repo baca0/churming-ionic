@@ -1,5 +1,5 @@
 import {Component, Inject} from "@angular/core";
-import {NavController} from "ionic-angular";
+import {NavController, Keyboard} from "ionic-angular";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/toPromise";
 import "rxjs/Rx";
@@ -12,12 +12,8 @@ import {GlobalVariable} from "../../providers/global.variable";
 export class SearchPage {
   private foods: any;
 
-  constructor(navCtrl: NavController, @Inject('ApiEndpoint') private apiEndpoint: string, private globalVariable: GlobalVariable) {
+  constructor(navCtrl: NavController, @Inject('ApiEndpoint') private apiEndpoint: string, private globalVariable: GlobalVariable, private keyboard: Keyboard) {
 
-  }
-
-  ionViewDidLoad() {
-    console.log('hello');
   }
 
   searchFoods(ev: any) {
@@ -34,6 +30,12 @@ export class SearchPage {
       });
     } else {
       this.foods = [];
+    }
+  }
+
+  hideKeyboard() {
+    if (this.keyboard.isOpen()) {
+      this.keyboard.close();
     }
   }
 

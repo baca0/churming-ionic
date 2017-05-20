@@ -1,11 +1,11 @@
 <ion-header>
   <!--<ion-navbar>-->
-    <!--<ion-title>LOGO</ion-title>-->
-    <!--<ion-buttons end>-->
-      <!--<button ion-button icon-only color="royal">-->
-        <!--<ion-icon name="menu"></ion-icon>-->
-      <!--</button>-->
-    <!--</ion-buttons>-->
+  <!--<ion-title>LOGO</ion-title>-->
+  <!--<ion-buttons end>-->
+  <!--<button ion-button icon-only color="royal">-->
+  <!--<ion-icon name="menu"></ion-icon>-->
+  <!--</button>-->
+  <!--</ion-buttons>-->
   <!--</ion-navbar>-->
   <ion-navbar>
     <ion-title>So!ate</ion-title>
@@ -14,7 +14,7 @@
 
 <ion-content>
   <ion-searchbar [placeholder]="'Search'" [showCancelButton]="true" (ionInput)="searchFoods($event)"></ion-searchbar>
-
+  <div (click)="hideKeyboard()">
     <ion-card *ngFor="let food of foods">
       <img src="{{apiEndpoint}}/images/food/{{food.englishName}}.jpeg"/>
       <ion-card-content>
@@ -24,4 +24,5 @@
         <p [outerHTML]="globalVariable.replaceLineBreak(food.description)">
       </ion-card-content>
     </ion-card>
+  </div>
 </ion-content>
